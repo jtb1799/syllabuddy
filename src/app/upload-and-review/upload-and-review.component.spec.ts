@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './upload-and-review.component';
+import { describe, expect } from "jasmine";
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -20,6 +21,8 @@ describe('AppComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

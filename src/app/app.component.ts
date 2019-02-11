@@ -1,35 +1,15 @@
-import { Component } from '@angular/core';
-import { AppService } from "./app.service"
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.template.html',
-  styleUrls: ['./app.style.scss']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  title = 'Syllabuddy';
-  twoWayExample = 'This is cool!';
+  constructor() { }
 
-  // Create an instance of our AppService
-  constructor(private appService: AppService) { }
-
-  // Angular Lifecycle Hook
   ngOnInit() {
-    this.helloWorld()
-  }
-
-  helloWorld() {
-    console.log(this.appService.helloWorld());
-  }
-
-  setTwoWayBinding() {
-    this.twoWayExample = "Or is it...?";
-    this.checkTwoWayBinding();
-  }
-
-  checkTwoWayBinding() {
-    console.log(this.twoWayExample);
   }
 
 }
